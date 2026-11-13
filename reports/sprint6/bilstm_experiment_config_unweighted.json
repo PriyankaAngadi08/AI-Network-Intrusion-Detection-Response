@@ -1,0 +1,121 @@
+{
+    "experiment_name": "Sprint 6 BiLSTM Intrusion Detection",
+    "dataset": "CIC-IDS2017",
+    "classification_type": "Multiclass classification",
+    "number_of_classes": 15,
+    "number_of_input_features": 70,
+    "input_shape": "(batch_size, 70, 1)",
+    "sequence_interpretation": "Feature-position sequence, not a chronological network-traffic sequence. The 70 positions are ordered tabular features.",
+    "training_rows_in_full_split": 1981520,
+    "training_sample_rows": 6004,
+    "maximum_samples_per_class": 500,
+    "sampled_rows_per_class": {
+        "BENIGN": 500,
+        "Bot": 500,
+        "DDoS": 500,
+        "DoS GoldenEye": 500,
+        "DoS Hulk": 500,
+        "DoS Slowhttptest": 500,
+        "DoS slowloris": 500,
+        "FTP-Patator": 500,
+        "Heartbleed": 8,
+        "Infiltration": 25,
+        "PortScan": 500,
+        "SSH-Patator": 500,
+        "Web Attack \ufffd Brute Force": 500,
+        "Web Attack \ufffd Sql Injection": 15,
+        "Web Attack \ufffd XSS": 456
+    },
+    "class_names": [
+        "BENIGN",
+        "Bot",
+        "DDoS",
+        "DoS GoldenEye",
+        "DoS Hulk",
+        "DoS Slowhttptest",
+        "DoS slowloris",
+        "FTP-Patator",
+        "Heartbleed",
+        "Infiltration",
+        "PortScan",
+        "SSH-Patator",
+        "Web Attack \ufffd Brute Force",
+        "Web Attack \ufffd Sql Injection",
+        "Web Attack \ufffd XSS"
+    ],
+    "label_to_id": {
+        "BENIGN": 0,
+        "Bot": 1,
+        "DDoS": 2,
+        "DoS GoldenEye": 3,
+        "DoS Hulk": 4,
+        "DoS Slowhttptest": 5,
+        "DoS slowloris": 6,
+        "FTP-Patator": 7,
+        "Heartbleed": 8,
+        "Infiltration": 9,
+        "PortScan": 10,
+        "SSH-Patator": 11,
+        "Web Attack \ufffd Brute Force": 12,
+        "Web Attack \ufffd Sql Injection": 13,
+        "Web Attack \ufffd XSS": 14
+    },
+    "training_history": [
+        {
+            "epoch": 1,
+            "training_loss": 2.2738884626270375,
+            "training_accuracy": 0.17671552298467688,
+            "validation_loss": 2.130628971374102,
+            "validation_accuracy": 0.32265049805110435,
+            "epoch_seconds": 3.5047709941864014
+        },
+        {
+            "epoch": 2,
+            "training_loss": 2.090892041150448,
+            "training_accuracy": 0.2546635576282478,
+            "validation_loss": 1.9940829277038574,
+            "validation_accuracy": 0.30056301429190124,
+            "epoch_seconds": 3.347304344177246
+        }
+    ],
+    "full_validation_results": {
+        "loss": 2.2673261362966084,
+        "accuracy": 0.12348243451064622,
+        "rows": 424611
+    },
+    "test_results": {
+        "loss": 2.2682779038463274,
+        "accuracy": 0.12297344399122022,
+        "macro_precision": 0.1213826232496261,
+        "macro_recall": 0.23192822194196927,
+        "macro_f1": 0.06574685315828774,
+        "weighted_f1": 0.09269738634285137,
+        "rows": 424612
+    },
+    "model_path": "models\\bilstm\\best_bilstm_model_unweighted.pt",
+    "confusion_matrix_path": "reports\\sprint6\\bilstm_test_confusion_matrix.csv",
+    "classwise_report_path": "reports\\sprint6\\bilstm_test_classification_report.txt",
+    "training_configuration": {
+        "chunk_size": 500,
+        "batch_size": 8,
+        "epochs": 2,
+        "validation_checkpoint_selection": "Class-aware validation sample, maximum 200 per class; full validation evaluated once after training.",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "hidden_size": 32,
+        "lstm_layers": 1,
+        "bidirectional": true,
+        "dropout": 0.2,
+        "optimizer": "Adam",
+        "loss_function": "CrossEntropyLoss",
+        "class_imbalance_strategy": "Class-aware reservoir sampling without class weights",
+        "cpu_threads": 2
+    },
+    "elapsed_seconds": 403.6889634132385,
+    "limitations": [
+        "The dataset does not provide the metadata needed to reconstruct reliable chronological flow sequences.",
+        "The BiLSTM processes the ordered 70 tabular feature positions; these are not time steps.",
+        "Feature order is inherited from the saved preprocessing schema.",
+        "Training uses a bounded class-aware sample because of RAM limits."
+    ]
+}

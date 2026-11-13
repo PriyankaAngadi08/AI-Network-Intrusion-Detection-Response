@@ -1,0 +1,87 @@
+
+{
+    "experiment_name": "Balanced 1D CNN Intrusion Detection",
+    "dataset": "CIC-IDS2017",
+    "classification_type": "Multiclass classification",
+    "number_of_classes": 15,
+    "number_of_input_features": 70,
+
+    "input_representation": {
+        "type": "1D feature sequence",
+        "tensor_shape": "(batch_size, 1, 70)",
+        "channel_count": 1,
+        "feature_count": 70
+    },
+
+    "model_architecture": {
+        "model_type": "1D CNN",
+        "layers": [
+            "Conv1d: 1 input channel, 16 output channels, kernel size 3, padding 1",
+            "ReLU",
+            "MaxPool1d: kernel size 2",
+            "Conv1d: 16 input channels, 32 output channels, kernel size 3, padding 1",
+            "ReLU",
+            "MaxPool1d: kernel size 2",
+            "Flatten",
+            "Linear: 544 to 64",
+            "ReLU",
+            "Linear: 64 to 15"
+        ]
+    },
+
+    "training_configuration": {
+        "batch_size": 64,
+        "chunk_size": 2000,
+        "epochs": 1,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "optimizer": "Adam",
+        "loss_function": "CrossEntropyLoss",
+        "class_imbalance_strategy": "Class-aware reservoir sampling",
+        "maximum_samples_per_class": 5000,
+        "actual_training_samples": 44969,
+        "class_weighting": false,
+        "cpu_threads": 2
+    },
+
+    "evaluation_configuration": {
+        "validation_dataset": "validation_processed.csv",
+        "test_dataset": "test_processed.csv",
+        "evaluation_metrics": [
+            "Accuracy",
+            "Macro Precision",
+            "Macro Recall",
+            "Macro F1",
+            "Weighted F1",
+            "Per-class Precision",
+            "Per-class Recall",
+            "Per-class F1"
+        ]
+    },
+
+    "saved_model": "models/cnn/best_cnn_model_balanced.pt",
+
+    "validation_results": {
+        "loss": 0.2826,
+        "accuracy": 0.9110,
+        "macro_f1": 0.4354
+    },
+
+    "test_results": {
+        "loss": 0.2819,
+        "accuracy": 0.9107,
+        "macro_precision": 0.3581,
+        "macro_recall": 0.7099,
+        "macro_f1": 0.4216,
+        "weighted_f1": 0.9312
+    },
+
+    "experiment_notes": [
+        "The balanced experiment used standard CrossEntropyLoss.",
+        "Training data was selected using class-aware reservoir sampling.",
+        "The sample limit was 5000 records per class.",
+        "Rare classes contributed fewer than 5000 records when fewer were available.",
+        "The model was trained for one epoch.",
+        "Test evaluation reused the saved checkpoint without retraining."
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "experiment_name": "CNN-BiLSTM Hybrid Model",
+    "sprint": 7,
+    "dataset": "CIC-IDS2017",
+    "input_features": 70,
+    "number_of_classes": 15,
+
+    "architecture": {
+        "input_shape": [1, 70],
+        "cnn": {
+            "convolution_layers": 2,
+            "channels": [16, 32],
+            "kernel_size": 3,
+            "activation": "ReLU",
+            "pooling": "MaxPool1D",
+            "pooling_size": 2,
+            "output_shape": [32, 17]
+        },
+        "bilstm": {
+            "input_size": 32,
+            "hidden_size": 32,
+            "num_layers": 1,
+            "bidirectional": true,
+            "output_features": 64
+        },
+        "classification": {
+            "pooling": "Mean pooling",
+            "dropout": 0.2,
+            "fully_connected": "64 -> 15"
+        },
+        "total_parameters": 19503
+    },
+
+    "training_configuration": {
+        "training_samples": 6004,
+        "maximum_samples_per_class": 500,
+        "chunk_size": 500,
+        "batch_size": 8,
+        "epochs": 2,
+        "optimizer": "Adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "loss_function": "CrossEntropyLoss",
+        "cpu_threads": 2
+    },
+
+    "best_checkpoint": {
+        "best_epoch": 1,
+        "validation_macro_f1": 0.2032,
+        "model_path": "models/cnn_bilstm/best_cnn_bilstm.pt"
+    },
+
+    "test_results": {
+        "test_samples": 424612,
+        "accuracy": 0.4902,
+        "macro_precision": 0.2241,
+        "macro_recall": 0.4564,
+        "macro_f1": 0.2033,
+        "weighted_f1": 0.6218
+    },
+
+    "limitations": [
+        "Training used a limited class-aware sample because of RAM constraints.",
+        "The dataset is highly imbalanced.",
+        "Some attack classes have very few training and test samples.",
+        "The BiLSTM processes CNN feature-map positions, not actual chronological network traffic."
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "Selected Experiment": "CNN Experiment 2 - Balanced Sampling",
+    "Model Checkpoint": "models/cnn/best_cnn_model_balanced.pt",
+    "Test Samples": 424612,
+    "Correct Predictions": 386680,
+    "Test Loss": 0.2819,
+    "Test Accuracy": 0.9107,
+    "Macro Precision": 0.3581,
+    "Macro Recall": 0.7099,
+    "Macro F1": 0.4216,
+    "Weighted Precision": 0.962,
+    "Weighted Recall": 0.9107,
+    "Weighted F1": 0.9312,
+    "Selection Reason": "The balanced experiment achieved substantially better validation accuracy and macro F1 than the first experiment.",
+    "Important Limitation": "Performance remains weak for several extremely rare attack classes."
+}
