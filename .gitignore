@@ -11,3 +11,13 @@ reports/sprint4/decision_tree_training_sample*.csv
 
 # Runtime detection logs
 logs/*.csv
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+
