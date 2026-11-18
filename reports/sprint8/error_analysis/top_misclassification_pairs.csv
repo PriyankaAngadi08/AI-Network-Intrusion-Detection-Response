@@ -1,0 +1,61 @@
+Model,Actual_Class,Predicted_Class,Misclassified_Samples
+Logistic Regression,PortScan,BENIGN,18776
+Logistic Regression,BENIGN,DoS GoldenEye,16139
+Logistic Regression,DDoS,BENIGN,11021
+Logistic Regression,DoS Hulk,BENIGN,9977
+Logistic Regression,PortScan,DoS GoldenEye,5064
+Logistic Regression,DDoS,DoS GoldenEye,5026
+Logistic Regression,DDoS,DoS Hulk,3157
+Logistic Regression,DoS Hulk,DoS GoldenEye,2202
+Logistic Regression,FTP-Patator,BENIGN,1191
+Logistic Regression,SSH-Patator,BENIGN,883
+Decision Tree,BENIGN,Bot,1143
+Decision Tree,BENIGN,PortScan,172
+Decision Tree,BENIGN,DoS Hulk,138
+Decision Tree,Web Attack � Brute Force,Web Attack � XSS,108
+Decision Tree,Bot,BENIGN,44
+Decision Tree,BENIGN,DDoS,31
+Decision Tree,BENIGN,DoS GoldenEye,30
+Decision Tree,Web Attack � XSS,Web Attack � Brute Force,23
+Decision Tree,BENIGN,DoS Slowhttptest,21
+Decision Tree,DoS Hulk,PortScan,21
+Random Forest,BENIGN,Bot,1356
+Random Forest,BENIGN,DoS Hulk,353
+Random Forest,BENIGN,Web Attack � XSS,188
+Random Forest,BENIGN,PortScan,164
+Random Forest,Web Attack � Brute Force,Web Attack � XSS,121
+Random Forest,BENIGN,Web Attack � Brute Force,109
+Random Forest,BENIGN,DoS Slowhttptest,63
+Random Forest,BENIGN,DoS GoldenEye,31
+Random Forest,BENIGN,DDoS,22
+Random Forest,DDoS,BENIGN,16
+CNN,BENIGN,Bot,7523
+CNN,BENIGN,SSH-Patator,5913
+CNN,BENIGN,PortScan,5454
+CNN,BENIGN,DoS GoldenEye,4076
+CNN,BENIGN,DoS Hulk,3206
+CNN,BENIGN,FTP-Patator,3102
+CNN,BENIGN,Web Attack � Brute Force,1565
+CNN,DoS Hulk,BENIGN,1556
+CNN,BENIGN,DoS Slowhttptest,1079
+CNN,BENIGN,DoS slowloris,976
+BiLSTM,BENIGN,PortScan,201209
+BiLSTM,BENIGN,FTP-Patator,74110
+BiLSTM,BENIGN,DoS GoldenEye,39086
+BiLSTM,BENIGN,DoS Slowhttptest,13068
+BiLSTM,DoS Hulk,PortScan,9872
+BiLSTM,DDoS,DoS GoldenEye,8998
+BiLSTM,DDoS,PortScan,6887
+BiLSTM,BENIGN,DoS Hulk,6193
+BiLSTM,DDoS,DoS Hulk,3167
+BiLSTM,DoS Hulk,DoS GoldenEye,2276
+CNN-BiLSTM,BENIGN,Bot,58410
+CNN-BiLSTM,BENIGN,SSH-Patator,39283
+CNN-BiLSTM,BENIGN,DoS GoldenEye,34000
+CNN-BiLSTM,BENIGN,Web Attack � Brute Force,15840
+CNN-BiLSTM,PortScan,Bot,10806
+CNN-BiLSTM,BENIGN,FTP-Patator,8617
+CNN-BiLSTM,BENIGN,DDoS,8131
+CNN-BiLSTM,DDoS,Bot,6615
+CNN-BiLSTM,BENIGN,DoS Hulk,5483
+CNN-BiLSTM,DoS Hulk,BENIGN,5322

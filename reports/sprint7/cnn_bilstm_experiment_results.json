@@ -1,0 +1,25 @@
+{
+    "model": "CNN-BiLSTM",
+    "best_epoch": 1,
+    "training_samples": 6004,
+    "test_samples": 424612,
+    "validation": {
+        "loss": 1.5845,
+        "accuracy": 0.4895,
+        "macro_f1": 0.2032
+    },
+    "test": {
+        "accuracy": 0.4902,
+        "macro_precision": 0.2241,
+        "macro_recall": 0.4564,
+        "macro_f1": 0.2033,
+        "weighted_f1": 0.6218
+    },
+    "stronger_class_results": {
+        "BENIGN_f1": 0.6374,
+        "DoS_Hulk_f1": 0.6501,
+        "PortScan_f1": 0.6066,
+        "DDoS_f1": 0.4721
+    },
+    "conclusion": "The CNN-BiLSTM model completed training and test evaluation. It achieved 49.02% test accuracy and 0.2033 macro F1. Performance was uneven across classes, with rare attack classes poorly detected. RAM constraints required class-aware sampling."
+}

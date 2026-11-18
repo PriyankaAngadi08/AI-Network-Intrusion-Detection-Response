@@ -1,0 +1,60 @@
+﻿Actual Class,Predicted Class,Misclassified Samples
+BENIGN,Bot,7523
+BENIGN,SSH-Patator,5913
+BENIGN,PortScan,5454
+BENIGN,DoS GoldenEye,4076
+BENIGN,DoS Hulk,3206
+BENIGN,FTP-Patator,3102
+BENIGN,Web Attack � Brute Force,1565
+DoS Hulk,BENIGN,1556
+BENIGN,DoS Slowhttptest,1079
+BENIGN,DoS slowloris,976
+BENIGN,DDoS,961
+DDoS,BENIGN,657
+DoS Hulk,DoS GoldenEye,516
+DoS Hulk,DDoS,489
+BENIGN,Web Attack � XSS,233
+PortScan,BENIGN,131
+Web Attack � XSS,Web Attack � Brute Force,94
+Bot,BENIGN,78
+PortScan,DoS slowloris,44
+Web Attack � Brute Force,SSH-Patator,31
+DoS slowloris,DoS Slowhttptest,27
+BENIGN,Infiltration,20
+DoS Slowhttptest,DoS slowloris,18
+DoS Hulk,Web Attack � XSS,16
+DDoS,DoS Hulk,16
+DoS Slowhttptest,BENIGN,15
+DoS GoldenEye,BENIGN,14
+DoS Hulk,FTP-Patator,13
+PortScan,DoS Hulk,11
+PortScan,FTP-Patator,9
+PortScan,DoS GoldenEye,9
+BENIGN,Heartbleed,9
+DoS slowloris,BENIGN,8
+SSH-Patator,FTP-Patator,8
+FTP-Patator,DoS slowloris,7
+SSH-Patator,BENIGN,6
+PortScan,Heartbleed,6
+Infiltration,BENIGN,3
+DoS Slowhttptest,Web Attack � Brute Force,3
+Web Attack � XSS,DoS Hulk,3
+PortScan,Web Attack � Brute Force,3
+DDoS,Bot,2
+DoS GoldenEye,DoS slowloris,2
+FTP-Patator,DoS Hulk,2
+DoS slowloris,DoS GoldenEye,2
+DoS GoldenEye,DoS Hulk,2
+Web Attack � Sql Injection,SSH-Patator,2
+DoS GoldenEye,DoS Slowhttptest,1
+Bot,PortScan,1
+DoS Slowhttptest,DoS GoldenEye,1
+DoS slowloris,FTP-Patator,1
+FTP-Patator,Web Attack � Brute Force,1
+Heartbleed,BENIGN,1
+DoS slowloris,SSH-Patator,1
+FTP-Patator,SSH-Patator,1
+PortScan,SSH-Patator,1
+SSH-Patator,PortScan,1
+Web Attack � Sql Injection,BENIGN,1
+Web Attack � XSS,BENIGN,1

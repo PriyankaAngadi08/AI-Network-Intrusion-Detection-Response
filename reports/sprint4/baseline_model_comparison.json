@@ -1,0 +1,32 @@
+[
+    {
+        "Model": "Decision Tree",
+        "Accuracy": 0.9955088304353867,
+        "Macro Precision": 0.7714177775437066,
+        "Macro Recall": 0.8876239035775769,
+        "Macro F1": 0.8012308428662216,
+        "Weighted F1": 0.9964609200384983,
+        "Macro FPR": 0.0003722538783513459,
+        "Metrics Source": "Saved JSON"
+    },
+    {
+        "Model": "Random Forest",
+        "Accuracy": 0.9942488536566411,
+        "Macro Precision": 0.7772382809107449,
+        "Macro Recall": 0.88162658226592,
+        "Macro F1": 0.7942092935099457,
+        "Weighted F1": 0.9955946636134696,
+        "Macro FPR": 0.00042232338755933516,
+        "Metrics Source": "Saved JSON"
+    },
+    {
+        "Model": "SGD Logistic Regression",
+        "Accuracy": 0.8206,
+        "Macro Precision": 0.161,
+        "Macro Recall": 0.2537,
+        "Macro F1": 0.1416,
+        "Weighted F1": 0.7968,
+        "Macro FPR": NaN,
+        "Metrics Source": "Previously recorded, rounded values"
+    }
+]

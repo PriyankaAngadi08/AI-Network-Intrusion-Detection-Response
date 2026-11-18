@@ -1,0 +1,61 @@
+
+{
+  "sprint": "Sprint 4 - Baseline Model Development",
+  "project": "AI-Network-Intrusion-Detection-Response",
+  "dataset": "CIC-IDS2017",
+  "task": "Multiclass network intrusion detection",
+  "target_column": " Label",
+  "feature_count": 70,
+  "random_seed": 42,
+  "data_split": {
+    "training_rows": 1981520,
+    "validation_rows": 424611,
+    "test_rows": 424612,
+    "test_usage": "Held-out final evaluation"
+  },
+  "primary_metric": "macro_f1",
+  "additional_metrics": [
+    "accuracy",
+    "macro_precision",
+    "macro_recall",
+    "weighted_f1",
+    "macro_false_positive_rate"
+  ],
+  "models": {
+    "logistic_regression_sgd": {
+      "algorithm": "SGDClassifier",
+      "loss": "log_loss",
+      "penalty": "l2",
+      "alpha": 0.0001,
+      "learning_rate": "optimal",
+      "class_weight": "capped balanced class weights",
+      "random_state": 42,
+      "training_strategy": "Incremental training in 50000-row chunks",
+      "training_data": "Full training dataset",
+      "model_path": "models/baselines/logistic_regression_sgd.joblib"
+    },
+    "decision_tree": {
+      "algorithm": "DecisionTreeClassifier",
+      "criterion": "gini",
+      "max_depth": 20,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "training_data": "Representative 300000-row training sample",
+      "model_path": "models/baselines/decision_tree.joblib"
+    },
+    "random_forest": {
+      "algorithm": "RandomForestClassifier",
+      "n_estimators": 100,
+      "criterion": "gini",
+      "max_depth": 20,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "n_jobs": -1,
+      "training_data": "Representative 300000-row training sample",
+      "model_path": "models/baselines/random_forest.joblib"
+    }
+  },
+  "comparison_note": "The SGD Logistic Regression model was trained on the full training dataset, while the Decision Tree and Random Forest models were trained on a representative 300000-row sample. Their comparison is therefore not a perfectly controlled comparison of algorithms alone."
+}

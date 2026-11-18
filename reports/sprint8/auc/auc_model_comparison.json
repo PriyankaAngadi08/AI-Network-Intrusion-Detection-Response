@@ -1,0 +1,38 @@
+[
+    {
+        "Model": "Logistic Regression",
+        "Macro_ROC_AUC": 0.8353314623119732,
+        "Macro_PR_AUC": 0.2810491532310782,
+        "Evaluation_Seconds": 6.463563299999805
+    },
+    {
+        "Model": "Decision Tree",
+        "Macro_ROC_AUC": 0.9660203532051143,
+        "Macro_PR_AUC": 0.8216000596770413,
+        "Evaluation_Seconds": 5.754526899999746
+    },
+    {
+        "Model": "Random Forest",
+        "Macro_ROC_AUC": 0.9995784025310139,
+        "Macro_PR_AUC": 0.8800775092872468,
+        "Evaluation_Seconds": 9.160679600000094
+    },
+    {
+        "Model": "CNN",
+        "Macro_ROC_AUC": 0.9897383129000178,
+        "Macro_PR_AUC": 0.5455940828739637,
+        "Evaluation_Seconds": 23.390979700000116
+    },
+    {
+        "Model": "BiLSTM",
+        "Macro_ROC_AUC": 0.7744558472902523,
+        "Macro_PR_AUC": 0.13421474264525735,
+        "Evaluation_Seconds": 44.235818799999834
+    },
+    {
+        "Model": "CNN-BiLSTM",
+        "Macro_ROC_AUC": 0.919507106795092,
+        "Macro_PR_AUC": 0.27576395030775036,
+        "Evaluation_Seconds": 40.90740300000016
+    }
+]

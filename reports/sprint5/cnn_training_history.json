@@ -1,0 +1,7 @@
+{
+    "epoch": [1],
+    "training_loss": [0.4776],
+    "validation_loss": [0.2826],
+    "validation_accuracy": [0.9110],
+    "validation_macro_f1": [0.4354]
+}

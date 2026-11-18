@@ -1,0 +1,17 @@
+Class-wise test metrics
+========================================================================
+BENIGN: precision=0.971029, recall=0.019366, f1=0.037974, support=340965
+Bot: precision=0.000000, recall=0.000000, f1=0.000000, support=295
+DDoS: precision=0.000000, recall=0.000000, f1=0.000000, support=19204
+DoS GoldenEye: precision=0.022815, recall=0.764896, f1=0.044308, support=1544
+DoS Hulk: precision=0.684986, recall=0.603387, f1=0.641603, support=34661
+DoS Slowhttptest: precision=0.043152, recall=0.752727, f1=0.081625, support=825
+DoS slowloris: precision=0.000000, recall=0.000000, f1=0.000000, support=869
+FTP-Patator: precision=0.006038, recall=0.397985, f1=0.011896, support=1191
+Heartbleed: precision=0.000000, recall=0.000000, f1=0.000000, support=1
+Infiltration: precision=0.000000, recall=0.000000, f1=0.000000, support=5
+PortScan: precision=0.092719, recall=0.940562, f1=0.168798, support=23840
+SSH-Patator: precision=0.000000, recall=0.000000, f1=0.000000, support=885
+Web Attack � Brute Force: precision=0.000000, recall=0.000000, f1=0.000000, support=226
+Web Attack � Sql Injection: precision=0.000000, recall=0.000000, f1=0.000000, support=3
+Web Attack � XSS: precision=0.000000, recall=0.000000, f1=0.000000, support=98

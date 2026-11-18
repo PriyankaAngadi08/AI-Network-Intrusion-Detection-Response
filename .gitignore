@@ -3,3 +3,11 @@ __pycache__/
 *.pyc
 .env
 .vscode/
+# Large processed datasets
+data/
+
+# Large generated training samples
+reports/sprint4/decision_tree_training_sample*.csv
+
+# Runtime detection logs
+logs/*.csv

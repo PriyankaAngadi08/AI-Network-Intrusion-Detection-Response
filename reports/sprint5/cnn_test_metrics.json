@@ -1,0 +1,11 @@
+{
+    "Test Samples": 424612,
+    "Correct Predictions": 386680,
+    "Test Accuracy": 0.9106666792271533,
+    "Macro Precision": 0.358112395615714,
+    "Macro Recall": 0.709860499329812,
+    "Macro F1": 0.4215922035964062,
+    "Weighted Precision": 0.9620127320681027,
+    "Weighted Recall": 0.9106666792271533,
+    "Weighted F1": 0.9311762167562744
+}

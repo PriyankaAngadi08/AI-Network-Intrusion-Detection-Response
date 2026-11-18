@@ -1,0 +1,9 @@
+{
+    "validation_rows": 424611,
+    "accuracy": 0.9942488536566411,
+    "macro_precision": 0.7772382809107449,
+    "macro_recall": 0.88162658226592,
+    "macro_f1": 0.7942092935099457,
+    "weighted_f1": 0.9955946636134696,
+    "macro_false_positive_rate": 0.00042232338755933516
+}

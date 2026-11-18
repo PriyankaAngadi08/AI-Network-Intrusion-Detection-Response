@@ -1,0 +1,3 @@
+﻿Experiment,Training Strategy,Training Samples,Training Loss,Validation Loss,Validation Accuracy,Validation Macro F1,Selected Model
+CNN Experiment 1 - Class Weighted,Full dataset with class-weighted CrossEntropyLoss,1981520,0.0647,3.0529,0.8075,0.0955,No
+CNN Experiment 2 - Balanced Sampling,Class-aware reservoir sampling with standard CrossEntropyLoss,44969,0.4776,0.2826,0.911,0.4354,Yes
